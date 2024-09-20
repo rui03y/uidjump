@@ -14,6 +14,23 @@
             height: 100vh;
             margin: 0;
         }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .image-container {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .image-container img {
+            width: 50%;
+            height: auto;
+        }
         input {
             padding: 10px;
             font-size: 16px;
@@ -27,6 +44,9 @@
     </style>
 </head>
 <body>
+   <div class="container">
+        <div class="image-container">
+            <img src="fireworksdino.gif" alt="等我再加载会...">
     <input type="text" id="numberInput" placeholder="Enter number" oninput="validateInput(this)">
     <button onclick="redirectToProfile()">Go to Profile</button>
 
