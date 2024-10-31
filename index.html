@@ -6,7 +6,9 @@
     <title>Profile Redirect</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(to bottom right, #1c1e21, #3a3b3c);
+            color: #ffffff;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -15,42 +17,66 @@
             margin: 0;
         }
         .container {
-            width: 100%;
-            max-width: 600px;
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-        }
-        .image-container {
-            width: 100%;
-            max-width: 600px;
-            margin-bottom: 10px;
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+            background-color: #242526;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
-        .image-container img {
-            width: 50%;
-            height: auto;
-        }
-        input {
-            padding: 10px;
-            font-size: 16px;
+        .image-container {
             margin-bottom: 20px;
         }
-        button {
-            padding: 10px 20px;
+        .image-container img {
+            width: 60%;
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+        input {
+            width: calc(100% - 20px);
+            padding: 12px;
             font-size: 16px;
+            margin-bottom: 15px;
+            border: 2px solid #3a3b3c;
+            border-radius: 8px;
+            outline: none;
+            background-color: #3a3b3c;
+            color: #ffffff;
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            border-color: #00aaff;
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #1877f2;
+            border: none;
+            border-radius: 8px;
             cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #005bb5;
         }
     </style>
 </head>
 <body>
-    <h1>UID跳转主页</h1>
     <div class="container">
+        <h1>UID跳转主页</h1>
         <div class="image-container">
             <img src="fireworksdino.gif" alt="等我再加载会...">
-     </div>
-    <input type="text" id="numberInput" placeholder="Enter number" oninput="validateInput(this)">
-    <button onclick="redirectToProfile()">Go to Profile</button>
+        </div>
+        <input type="text" id="numberInput" placeholder="Enter number" oninput="validateInput(this)">
+        <button onclick="redirectToProfile()">Go to Profile</button>
+    </div>
 
     <script>
         function validateInput(input) {
